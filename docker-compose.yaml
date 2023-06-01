@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  zauberstein.app:
+    image: ${DOCKER_REGISTRY}/zauberstein.app
+    build:
+      context: .
+      dockerfile: Dockerfile

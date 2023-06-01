@@ -1,0 +1,27 @@
+name: Build Docker Image
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout source code 
+      uses: actions/checkout@v3
+
+    - name: Build the Docker image
+      run: docker-compose build homepage.app
+    
+    - name: Docker Tag
+      run: docker tag zauberstein.azurecr.io/zauberstein.app:latest zauberstein.azurecr.io/zauberstein.app:${{ github.run_id }}.${{ github.run_number }}
+      
+    - name: Docker Login
+      run: docker login zauberstein.azurecr.io -u ${{ secrets.CR_USERNAME }} -p ${{ secrets.CR_TOKEN }}
+      
+    - name: Docker Push
+      run: docker push zauberstein.azurecr.io/zauberstein.app:${{ github.run_id }}.${{ github.run_number }}
