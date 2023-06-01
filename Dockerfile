@@ -20,7 +20,7 @@ FROM nginx:alpine
 RUN rm -rf /usr/share/nginx/html/*
 
 # Copy static assets from builder stage
-COPY --from=builder /src/dist /usr/share/nginx/html
+COPY --from=builder /src/dist/zauberstein /usr/share/nginx/html
 COPY ./nginx.conf /etc/nginx/conf.d/default.conf
 
 EXPOSE 80
