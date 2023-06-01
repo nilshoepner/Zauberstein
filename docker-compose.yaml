@@ -5,4 +5,14 @@ services:
     image: ${DOCKER_REGISTRY}/zauberstein.app
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: frontend/Dockerfile
+
+
+  zauberstein.api:
+    image: ${DOCKER_REGISTRY}/zauberstein.api
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+
+
+      
