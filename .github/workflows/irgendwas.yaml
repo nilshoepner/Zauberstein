@@ -15,7 +15,7 @@ jobs:
       uses: actions/checkout@v3
 
     - name: Build the Docker image
-      run: docker-compose build homepage.app
+      run: docker-compose build zauberstein.app
     
     - name: Docker Tag
       run: docker tag zauberstein.azurecr.io/zauberstein.app:latest zauberstein.azurecr.io/zauberstein.app:${{ github.run_id }}.${{ github.run_number }}
