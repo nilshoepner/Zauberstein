@@ -1,4 +1,6 @@
 
+$mainColor: #195008;
+
 
   h1,
   h2,
@@ -25,7 +27,7 @@
     height: 4em;
     display: flex;
     align-items: center;
-    background-color: #1976d2;
+    background-color: $mainColor;
     color: white;
     font-weight: 600;
     padding: 0px 1em;
@@ -39,6 +41,13 @@
       width: 32px;
       height: 32px;
       margin-right: 0.5em;
+
+      *{
+        font-size: 30px;
+        width: unset;
+        height: unset;
+        color: white;
+      }
     }
 
     .mat-icon{
@@ -60,6 +69,10 @@
     gap: 1em;
     border-right: black solid 1px;
     padding: 0.5em;
+
+    .option{
+      white-space: nowrap;
+    }
   }
 
   .window{
@@ -67,13 +80,28 @@
     padding: 0.5em;
   }
 
+   .gap-05{
+    gap: 0.5em;
+   }
+   
+   .margin-left {
+    margin-left: 0.5em;
+   }
+   
+   .clickable{
+    cursor: pointer;
+    text-decoration: underline solid 1px ;
+   }
+
   .footer{
     height: 2em;
-    background-color: #1976d2;
+    background-color: $mainColor;
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
-
+    display: flex;
+    align-items: center;
+    color: white;
   }
 

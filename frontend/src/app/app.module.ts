@@ -12,13 +12,21 @@ import { MatFormFieldModule, MAT_FORM_FIELD_DEFAULT_OPTIONS,  } from '@angular/m
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { AdminLoginComponent } from './components/admin-login/admin-login.component';
 import { CalenderComponent } from './calender/calender.component';
+import { FleshandbloodComponent } from './components/fleshandblood/fleshandblood.component';
+import { YugiohComponent } from './components/yugioh/yugioh.component';
+import { ImpressumComponent } from './components/impressum/impressum.component';
+import { KontaktComponent } from './components/kontakt/kontakt.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingPageComponent,
     AdminLoginComponent,
-    CalenderComponent
+    CalenderComponent,
+    FleshandbloodComponent,
+    YugiohComponent,
+    ImpressumComponent,
+    KontaktComponent
   ],
   imports: [
     BrowserModule,
