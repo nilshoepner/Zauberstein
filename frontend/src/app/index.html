@@ -1,73 +1,71 @@
 <div class="toolbar" role="banner">
-  
+
   <div (click)="openLandingPage()" class="flex-row f-ai-c clickable">
-    <img width="40" alt="Angular Logo"
-    src="../assets/logo_clean.png" />
-    
-    <span>Welcome</span> 
+    <img width="40" alt="Angular Logo" src="../assets/logo_clean.png" />
+
+    <span>Welcome</span>
   </div>
 
   <div class="spacer"></div>
 
   <a aria-label="Admin Login" target="_blank" rel="noopener" title="Admin Login" [routerLink]="'./login'">
-    <mat-icon >perm_identity</mat-icon>
+    <mat-icon>perm_identity</mat-icon>
   </a>
 
   <a href="https://instagram.com/diezaubersteingmbh?igshid=MzNINGNkZWQ4Mg==">
-      <svg  width="30" height="30" 
-      viewBox="0 0 24 24"><path fill="white" 
-      d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3Z"
-      /></svg>
+    <svg width="30" height="30" viewBox="0 0 24 24">
+      <path fill="white"
+        d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3Z" />
+    </svg>
   </a>
 
 
   <a aria-label="Zauberstein on Facebook" target="_blank" rel="noopener"
     href="https://www.facebook.com/people/Die-Zauberstein-GmbH/100083195177280/" title="Facebook">
-    <mat-icon >facebook</mat-icon>
+    <mat-icon>facebook</mat-icon>
   </a>
 </div>
 
 <div class="content flex-row flex-1-0-0" role="main">
 
-<div class="side-nav">
-  <div class="option clickable">
-      <button mat-flat-button routerLink="calender">Termine</button>  
-  </div>
+  <div class="side-nav">
+    <div class="option clickable">
+      <button mat-flat-button routerLink="calender">Termine</button>
+    </div>
 
-  <div class="option clickable">
+    <div class="option clickable">
       <button mat-flat-button routerLink="genres/magic">Magic</button>
-  </div>
+    </div>
 
-  <div class="option clickable">
+    <div class="option clickable">
       <button mat-flat-button routerLink="genres/warhammer">Warhammer</button>
-  </div>
+    </div>
 
-  <div class="option clickable">
+    <div class="option clickable">
       <button mat-flat-button routerLink="genres/pokemon">PKM</button>
-  </div>
+    </div>
 
-  <div class="option clickable">
+    <div class="option clickable">
       <button mat-flat-button routerLink="./genres/yugioh">Yu-Gi-Oh!</button>
-  </div>
+    </div>
 
-  <div class="option clickable">
-    <button mat-flat-button routerLink="./genres/fleshandblood">Flesh & Blood</button>
-</div>
+    <div class="option clickable">
+      <button mat-flat-button routerLink="./genres/fleshandblood">Flesh & Blood</button>
+    </div>
 
-  <div class="option clickable">
+    <div class="option clickable">
       <button mat-flat-button routerLink="./Ideen">Ideen?</button>
+    </div>
   </div>
-</div>
 
-<div class="window">
-  <router-outlet></router-outlet>
+  <div class="window">
+    <router-outlet></router-outlet>
     <!-- <full-calendar [options]="calendarOptions"></full-calendar> -->
 
-</div>
+  </div>
 </div>
 
 <div class="footer gap-05 flex-row">
   <span routerLink="./impressum" class="clickable margin-left"> Impressum </span>
   <span routerLink="./kontakt" class="clickable"> Konakt </span>
 </div>
-
