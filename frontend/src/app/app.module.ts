@@ -16,6 +16,9 @@ import { FleshandbloodComponent } from './components/fleshandblood/fleshandblood
 import { YugiohComponent } from './components/yugioh/yugioh.component';
 import { ImpressumComponent } from './components/impressum/impressum.component';
 import { KontaktComponent } from './components/kontakt/kontakt.component';
+import { UploadComponent } from './upload/upload.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,8 @@ import { KontaktComponent } from './components/kontakt/kontakt.component';
     FleshandbloodComponent,
     YugiohComponent,
     ImpressumComponent,
-    KontaktComponent
+    KontaktComponent,
+    UploadComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +39,9 @@ import { KontaktComponent } from './components/kontakt/kontakt.component';
     FullCalendarModule,
     MatIconModule,
     MatFormFieldModule,
-    MatButtonModule
+    MatButtonModule,
+    MatDialogModule,
+    HttpClientModule
   ],
  
   providers: [

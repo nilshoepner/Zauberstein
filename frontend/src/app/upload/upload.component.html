@@ -1,0 +1,29 @@
+<div class="dialog-container upload-size">
+    <div class="dialog-header">
+        <span class="green-header-border"></span>
+        <span class="flex-row f-ai-c f-jc-c flex-1-0-0">
+            header
+        </span>
+    </div>
+
+    <div class="dialog-content">
+        <div>
+            <input type="file" class="file-input" (change)="onFileSelected($event)" #fileUpload>
+
+            <!-- <div class="file-upload">
+
+                {{fileName || "No file uploaded yet."}}
+
+                <button mat-mini-fab color="primary" class="upload-btn" (click)="fileUpload.click()">
+                    <mat-icon>attach_file</mat-icon>
+                </button>
+            </div> -->
+
+
+        </div>
+    </div>
+
+    <div class="dialog-footer">
+        footer
+    </div>
+</div>

@@ -9,8 +9,9 @@ public SqlConnection conn = new SqlConnection();
 
 public EventController(){}
 
-[HttpGet]
-public string Test(){
+[HttpGet("upload")]
+public string Upload(){
+    
 // var insert = new SqlCommand("INSERT INTO tbl (xls) VALUES (@xls)", conn);
 // insert.Parameters.AddWithValue("xls", File.ReadAllBytes("template.xls"));
 // insert.ExecuteNonQuery();
