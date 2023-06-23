@@ -6,8 +6,8 @@ import { Observable, of } from 'rxjs';
   providedIn: 'root'
 })
 export class UploadServiceService {
-  route =  'http://zaubersteinbackend.azurewebsites.net/';
-  testRoute = 'http://localhost:5175/';
+  route =  'https://zaubersteinbackend.azurewebsites.net/';
+  testRoute = 'https://localhost:5175/';
 
 
   constructor(private http: HttpClient) { }
