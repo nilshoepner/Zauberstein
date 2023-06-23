@@ -15,6 +15,6 @@ export class UploadServiceService {
   uploadPdf(file:any):Observable<boolean>{
     console.log(file)
 
-    return this.http.post<boolean>(this.route + 'event/upload', file)
+    return this.http.post<boolean>(this.route + 'Event/upload', file)
   }
 }
