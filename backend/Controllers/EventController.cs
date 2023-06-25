@@ -10,7 +10,7 @@ public SqlConnection conn = new SqlConnection();
 public EventController(){}
 
 [HttpPost("upload")]
-public string Upload([FromBody] string test ){
+public string Upload([FromBody] test test ){
     
 // var insert = new SqlCommand("INSERT INTO tbl (xls) VALUES (@xls)", conn);
 // insert.Parameters.AddWithValue("xls", File.ReadAllBytes("template.xls"));
@@ -26,4 +26,8 @@ public string Upload([FromBody] string test ){
     }
     return testString;
 }
+}
+
+class test{
+    string best;
 }

@@ -13,8 +13,11 @@ export class UploadServiceService {
   constructor(private http: HttpClient) { }
 
   uploadPdf(file:any):Observable<boolean>{
-    console.log(file)
 
-    return this.http.post<boolean>(this.route + 'Event/upload','test')
+    return this.http.post<boolean>(this.route + 'Event/upload',{best:'test'} as test)
   }
+}
+
+interface test{
+  best:string;
 }
