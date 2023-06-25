@@ -9,7 +9,7 @@ public SqlConnection conn = new SqlConnection();
 
 public EventController(){}
 
-[HttpGet("upload")]
+[HttpPost("upload")]
 public string Upload(string test){
     
 // var insert = new SqlCommand("INSERT INTO tbl (xls) VALUES (@xls)", conn);
