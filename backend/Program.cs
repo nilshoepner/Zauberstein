@@ -27,14 +27,14 @@ builder.Services.AddCors(options =>
         );
     }else{
         options.AddPolicy("AllowSPA",
-            builder => builder.WithOrigins("https://zauberstein.azurewebsites.net")
+            builder => builder.WithOrigins("http://zaubersteinbackend.azurewebsites.net")
                 .AllowAnyMethod()
                 .AllowAnyHeader()
                 .AllowCredentials()
         );
 
         options.AddPolicy("CorsPolicy",
-            builder => builder.WithOrigins("zaubersteinbackend.azurewebsites.net")
+            builder => builder.WithOrigins("http://zaubersteinbackend.azurewebsites.net")
                 .AllowAnyHeader()
                 .AllowAnyMethod()
                 .AllowCredentials()
