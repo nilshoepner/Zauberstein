@@ -1,4 +1,4 @@
-import { Component,ChangeDetectorRef, ViewChild } from '@angular/core';
+import { Component,ChangeDetectorRef } from '@angular/core';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import { CalendarOptions, DateSelectArg, EventClickArg, EventApi } from '@fullcalendar/core';
 import interactionPlugin from '@fullcalendar/interaction';
@@ -84,6 +84,4 @@ export class CalenderComponent {
     this.currentEvents = events;
     this.changeDetector.detectChanges();
   }
-
-  
 }

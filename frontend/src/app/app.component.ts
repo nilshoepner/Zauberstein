@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { MatDialog} from '@angular/material/dialog';
-import { UploadComponent } from './upload/upload.component';
+import { UploadComponent } from './components/upload/upload.component';
 
 
 @Component({

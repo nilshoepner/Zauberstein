@@ -1,0 +1,22 @@
+<div class="dialog-container upload-size">
+    <div class="dialog-header">
+        <span class="green-header-border"></span>
+        
+        <span class="flex-row f-ai-c flex-1-0-0">
+            Termin erstellen
+        </span>
+    </div>
+
+    <div class="dialog-content" style="gap: 2em;">
+        <input matInput type="text" [(ngModel)]="eventName">
+
+        <input matInput type="date" [(ngModel)]="eventDate">
+
+        <input type="file"  (change)="onFileSelected($event)" #fileUpload>
+        
+    </div>
+
+    <div class="dialog-footer">
+        footer
+    </div>
+</div>

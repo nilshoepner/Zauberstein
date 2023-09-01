@@ -116,8 +116,8 @@ app-root{
 .dialog-content{
   display: flex;
   flex: 1 0 0px;
-  width: 100%;
   flex-direction: column;
+  margin: 0 1em;
 }
 
 .dialog-footer{

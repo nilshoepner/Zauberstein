@@ -13,10 +13,11 @@ export class LandingPageComponent {
     while (rnd === 0 || rnd == 9 || rnd === 10) {
       rnd = Math.floor(Math.random() * 10)
     }
-    console.log(rnd)
-    this.randomLogoNr = '/assets/zauberlogo' + rnd + '.jpg'
-  }
 
+    this.randomLogoNr = '/assets/zauberlogo' + rnd + '.jpg'
+
+  }
+  
 
 
 }

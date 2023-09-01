@@ -6,18 +6,29 @@ import { Observable, of } from 'rxjs';
   providedIn: 'root'
 })
 export class UploadServiceService {
-  route =  'https://zaubersteinbackend.azurewebsites.net/';
-  testRoute = 'https://localhost:5175/';
-
+  officialRoute =  'http://zaubersteinbackend.azurewebsites.net/';
+  testRoute = 'http://localhost:5175/';
+  route = this.officialRoute;
 
   constructor(private http: HttpClient) { }
 
-  uploadPdf(file:any):Observable<boolean>{
+  uploadPdf(file:File,rest:IUpload):Observable<boolean>{
 
-    return this.http.post<boolean>(this.route + 'Event/upload',{best:'test'} as test)
+    const formData = new FormData();
+    if(file){
+      formData.append('file', file, file.name);
+    }
+
+    return this.http.post<boolean>(this.route + 'Event/upload?name='+rest.name+'&date='+rest.date?.toISOString(), formData);
+  }
+
+  downloadPdf():Observable<IUpload[]>{    
+    return this.http.get<IUpload[]>(this.route + 'Event/get');
   }
 }
 
-interface test{
-  best:string;
+export interface IUpload{
+  name?:string;
+  date?:Date;
+  bytes?:any[];
 }

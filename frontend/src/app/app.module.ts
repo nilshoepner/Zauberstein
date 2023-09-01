@@ -16,9 +16,12 @@ import { FleshandbloodComponent } from './components/fleshandblood/fleshandblood
 import { YugiohComponent } from './components/yugioh/yugioh.component';
 import { ImpressumComponent } from './components/impressum/impressum.component';
 import { KontaktComponent } from './components/kontakt/kontakt.component';
-import { UploadComponent } from './upload/upload.component';
+import { UploadComponent } from './components/upload/upload.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import { MagicComponent } from './components/magic/magic.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +31,7 @@ import { HttpClientModule } from '@angular/common/http';
     CalenderComponent,
     FleshandbloodComponent,
     YugiohComponent,
+    MagicComponent,
     ImpressumComponent,
     KontaktComponent,
     UploadComponent
@@ -40,8 +44,10 @@ import { HttpClientModule } from '@angular/common/http';
     MatIconModule,
     MatFormFieldModule,
     MatButtonModule,
+    ReactiveFormsModule,
     MatDialogModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,CommonModule
   ],
  
   providers: [
