@@ -9,8 +9,6 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddCors(options =>
 {
-    var test = false;
-    if(test){
         options.AddPolicy("AllowSPA",
             builder => builder.WithOrigins("https://localhost:5175")
                 .AllowAnyMethod()
@@ -25,22 +23,6 @@ builder.Services.AddCors(options =>
                 .AllowCredentials()
                 .SetIsOriginAllowed((host) => true)
         );
-    }else{
-        options.AddPolicy("AllowSPA",
-            builder => builder.WithOrigins("http://zaubersteinbackend.azurewebsites.net")
-                .AllowAnyMethod()
-                .AllowAnyHeader()
-                .AllowCredentials()
-        );
-
-        options.AddPolicy("CorsPolicy",
-            builder => builder.WithOrigins("http://zaubersteinbackend.azurewebsites.net")
-                .AllowAnyHeader()
-                .AllowAnyMethod()
-                .AllowCredentials()
-                .SetIsOriginAllowed((host) => true)
-        );
-    }
 });
 
 
