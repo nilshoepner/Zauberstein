@@ -18,17 +18,26 @@ export class UploadServiceService {
     if(file){
       formData.append('file', file, file.name);
     }
-
-    return this.http.post<boolean>(this.route + 'Event/upload?name='+rest.name+'&date='+rest.date?.toISOString(), formData);
+    return this.http.post<boolean>(this.route + 'Event/upload?name='+rest.name+'&date='+rest.date.toString()+'&category='+rest.category, formData);
   }
 
-  downloadPdf():Observable<IUpload[]>{    
-    return this.http.get<IUpload[]>(this.route + 'Event/get');
+  getNewestPerCategory(category:CategoryEnum):Observable<IUpload[]>{    
+    return this.http.get<IUpload[]>(this.route + 'Event/get?category='+category);
   }
 }
 
+export enum CategoryEnum{
+  none=-1,
+  magic=0,
+  pokemon=1,
+  warhammer=2,
+  yugioh=3,
+  fleshNblood=4
+}
+
 export interface IUpload{
-  name?:string;
-  date?:Date;
-  bytes?:any[];
+  name:string;
+  date:Date;
+  bytes:any[];
+  category:CategoryEnum;
 }

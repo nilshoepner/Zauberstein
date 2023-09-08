@@ -22,6 +22,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { MagicComponent } from './components/magic/magic.component';
+import { PokemonComponent } from './components/pokemon/pokemon.component';
+import {MatSelectModule} from '@angular/material/select';
+import { WarhammerComponent } from './components/warhammer/warhammer.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +35,8 @@ import { MagicComponent } from './components/magic/magic.component';
     FleshandbloodComponent,
     YugiohComponent,
     MagicComponent,
+    WarhammerComponent,
+    PokemonComponent,
     ImpressumComponent,
     KontaktComponent,
     UploadComponent
@@ -40,6 +45,7 @@ import { MagicComponent } from './components/magic/magic.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    MatSelectModule,
     FullCalendarModule,
     MatIconModule,
     MatFormFieldModule,
@@ -47,7 +53,8 @@ import { MagicComponent } from './components/magic/magic.component';
     ReactiveFormsModule,
     MatDialogModule,
     HttpClientModule,
-    FormsModule,CommonModule
+    FormsModule,CommonModule,
+    MatIconModule
   ],
  
   providers: [
@@ -55,6 +62,4 @@ import { MagicComponent } from './components/magic/magic.component';
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule {
-  // subscript:SubscriptSizing=
-}
+export class AppModule {}

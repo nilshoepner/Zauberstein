@@ -2,21 +2,36 @@
     <div class="dialog-header">
         <span class="green-header-border"></span>
         
-        <span class="flex-row f-ai-c flex-1-0-0">
+        <span class="flex-row f-ai-c flex-1-0-0" style="margin-left: 1em;">
             Termin erstellen
         </span>
     </div>
 
-    <div class="dialog-content" style="gap: 2em;">
-        <input matInput type="text" [(ngModel)]="eventName">
+    <form [formGroup]="uploadForm"  class="dialog-content">
 
-        <input matInput type="date" [(ngModel)]="eventDate">
-
-        <input type="file"  (change)="onFileSelected($event)" #fileUpload>
+        <label for="name">Eventname</label>
+        <input formControlName="name" matInput type="text" >
         
-    </div>
+
+        <label for="date">Datum</label>
+        <input formControlName="date" [min]="now" matInput type="date">
+
+        <label>Kategorie</label>
+        <mat-select  [(value)]="category" >
+            <mat-option *ngFor="let category of categories" [value]="category">
+                {{categoryEnum[category]}}
+            </mat-option>
+        </mat-select>
+        
+        <label>Pdf-Datei</label>
+        <input type="file" style="width: fit-content;" class="clickable" (change)="onFileSelected($event)" #fileUpload>
+            
+    </form>
 
     <div class="dialog-footer">
-        footer
+        <span class="flex-1-0-0"></span>
+
+        <mat-icon style="color: red;margin-right: 0.5em;" *ngIf="uploadForm.controls.date.errors?.['dateError'] && uploadForm.controls.date.dirty" [title]="'Datum is schon vorbei'">warning</mat-icon>
+        <button (click)="pdfUpload()" [disabled]="!uploadForm.valid || !fileValid || category === -1">Speichern</button>
     </div>
 </div>

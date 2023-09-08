@@ -118,11 +118,16 @@ app-root{
   flex: 1 0 0px;
   flex-direction: column;
   margin: 0 1em;
+  label{
+    margin-top: 1em;
+  }
 }
 
 .dialog-footer{
   height: 30px;
-  width: 100%;
+  width: calc(100% - 0.5em);
+  padding-right: 0.5em;
+  padding-bottom: 0.5em;
   display: flex;
   flex-direction: row;
 }
