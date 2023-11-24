@@ -32,7 +32,8 @@ export enum CategoryEnum{
   pokemon=1,
   warhammer=2,
   yugioh=3,
-  fleshNblood=4
+  fleshNblood=4,
+  brettspiele=5,
 }
 
 export interface IUpload{

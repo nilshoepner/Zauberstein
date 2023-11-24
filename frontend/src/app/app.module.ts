@@ -10,13 +10,13 @@ import { FullCalendarModule } from '@fullcalendar/angular';
 import { MatIconModule } from '@angular/material/icon';
 import { MatFormFieldModule, MAT_FORM_FIELD_DEFAULT_OPTIONS,  } from '@angular/material/form-field';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
-import { AdminLoginComponent } from './components/admin-login/admin-login.component';
+import { AdminLoginComponent } from './components/dialogs/admin-login/admin-login.component';
 import { CalenderComponent } from './calender/calender.component';
 import { FleshandbloodComponent } from './components/fleshandblood/fleshandblood.component';
 import { YugiohComponent } from './components/yugioh/yugioh.component';
 import { ImpressumComponent } from './components/impressum/impressum.component';
 import { KontaktComponent } from './components/kontakt/kontakt.component';
-import { UploadComponent } from './components/upload/upload.component';
+import { UploadComponent } from './components/dialogs/upload/upload.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -25,6 +25,7 @@ import { MagicComponent } from './components/magic/magic.component';
 import { PokemonComponent } from './components/pokemon/pokemon.component';
 import {MatSelectModule} from '@angular/material/select';
 import { WarhammerComponent } from './components/warhammer/warhammer.component';
+import { BrettspieleComponent } from './components/brettspiele/brettspiele.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { WarhammerComponent } from './components/warhammer/warhammer.component';
     PokemonComponent,
     ImpressumComponent,
     KontaktComponent,
-    UploadComponent
+    UploadComponent,
+    BrettspieleComponent
   ],
   imports: [
     BrowserModule,

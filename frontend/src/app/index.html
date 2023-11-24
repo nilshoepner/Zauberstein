@@ -8,9 +8,9 @@
 
   <div class="spacer"></div>
 
-  <a aria-label="Admin Login" target="_blank" rel="noopener" title="Admin Login" [routerLink]="'./login'">
+  <!-- <a aria-label="Admin Login" target="_blank" rel="noopener" title="Admin Login" [routerLink]="'./login'">
     <mat-icon>perm_identity</mat-icon>
-  </a>
+  </a> -->
 
   <a href="https://instagram.com/diezaubersteingmbh?igshid=MzNINGNkZWQ4Mg==">
     <svg width="30" height="30" viewBox="0 0 24 24">
@@ -25,15 +25,14 @@
     <mat-icon>facebook</mat-icon>
   </a>
 
-  <button mat-flat-button (click)="openUpload()">upload</button>
 </div>
 
 <div class="content flex-row flex-1-0-0" role="main">
 
   <div class="side-nav">
-    <div class="option clickable">
+    <!-- <div class="option clickable">
       <button mat-flat-button routerLink="calender">Termine</button>
-    </div>
+    </div> -->
 
     <div class="option clickable">
       <button mat-flat-button routerLink="genres/magic">Magic</button>
@@ -56,17 +55,26 @@
     </div>
 
     <div class="option clickable">
+      <button mat-flat-button routerLink="./genres/brettspiele">Brettspiele</button>
+    </div>
+
+    <div class="option clickable">
       <button mat-flat-button routerLink="./Ideen">Ideen?</button>
     </div>
   </div>
 
   <div class="window">
     <router-outlet></router-outlet>
-    <!-- <full-calendar [options]="calendarOptions"></full-calendar> -->
-
+    
   </div>
 </div>
 
-<div class="footer gap-05 flex-row">
+<div class="footer gap-05 flex-row overflow-y-h">
   <span routerLink="./impressum" class="clickable margin-left"> Impressum </span>
+
+  <span class="flex-1-0-0"></span>
+
+  <button  mat-icon-button (click)="openUpload()">
+    <mat-icon>admin</mat-icon>
+  </button>
 </div>

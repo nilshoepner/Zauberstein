@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CategoryEnum, IUpload, UploadServiceService } from '../../services/upload-service.service';
+import { CategoryEnum, IUpload, UploadServiceService } from '../../../services/upload-service.service';
 import { lastValueFrom } from 'rxjs';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Dialog } from '@angular/cdk/dialog';
@@ -25,6 +25,7 @@ export class UploadComponent {
     CategoryEnum.warhammer,
     CategoryEnum.yugioh,
     CategoryEnum.fleshNblood,
+    CategoryEnum.brettspiele,
   ]
 
   uploadForm = new FormGroup({
@@ -50,13 +51,13 @@ export class UploadComponent {
         this.currenFile = files.item(0);
 
         if(files.length !== 1){
-          console.warn('Bitte wähle nur eine Datei aus.');
+          window.alert('Bitte wähle nur eine Datei aus.');
           this.fileValid = false;
           return
         }
         
         if(this.currenFile && !this.currenFile.name.toString().endsWith('.pdf')){
-          console.warn('Bitte überprüfe das wirklich eine Pdf ausgewählt war.');
+          window.alert('Bitte überprüfe das wirklich eine Pdf ausgewählt war.');
           this.fileValid = false;
           return;
         }

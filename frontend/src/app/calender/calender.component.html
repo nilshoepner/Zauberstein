@@ -1,8 +1,15 @@
 <div class="full-page f-ai-c">
-    <full-calendar  [options]="calendarOptions" #calender id="calender">
-        <!-- <ng-template #eventContent let-arg>
-            <b>{{ arg.timeText }}</b>
-            <i>{{ arg.event.title }}</i>
-          </ng-template> -->
-    </full-calendar>
+      <div class="flex-column w-100 h-100">
+            <div class="flex-row ">
+                <div *ngFor="let weekDay of ['Montag','Dienstag','Mittwoch','Donnerstag','Freitag','Samstag','Sonntag']" class="flex-1-0-0">
+                    {{weekDay}}
+                </div>
+            </div>
+
+            <div class="flex-row">
+                <div *ngFor="let row of [1,2,3,4,5]" class="flex-column">
+                    test
+                </div>
+            </div>
+    </div>
 </div>
